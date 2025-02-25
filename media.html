@@ -1,0 +1,55 @@
+// upload file management system using s3 bucket
+{
+  Model Name: MediaManager,
+  Model Schema: 
+   1.  column:  owner
+    2.  column:  filename
+    3.  column:  storage
+    4.  column:  mediatype : avatar , UserDocument, Post , Feed, Profile, Misc
+    5.  column:  type:image,video,audio,document
+    5.  column:  sizeInBytes
+    6.  column:  extension
+    7.  column:  url
+    8.  column:  resource
+    9.  column:  metadata
+    10. column:  title
+    11. column:  uploadedAt
+    12. column:  uploadedBy
+    13. column:  forPlatform
+    14. column:  isPublic
+}
+ 
+Custom Validation: 
+  1. check supported mediatype = enum('image', 'video', 'audio', 'document', 'misc')
+  2. check  allowd media resource = enum('post','feed','profile','documents','misc','flags','icons')
+  3. check allowed extensions according to mediatype
+  4. check file size limit according to mediatype
+
+Upload File Path:
+  *For Platform Media:
+    1. /platform/media/flags
+    2. /platform/media/icons
+  
+  *For User Media for profile pic:
+    1.  /platform/media/:owner/avatar
+  *For User Media for other resources media:
+    1. /platform/media/:resource/:mediatype/:year/:month/:day
+
+Route Structures:
+  /media/upload/images
+  /media/upload/videos
+  /media/upload/audios
+  /media/upload/documents
+  /media/upload/icons
+
+  Each route has different validator , controller and service to handle file upload.
+  use DOMPurify for svg sanitization
+
+1. Create Media Model
+2. Create MediaManager Service class manage all restriction and upload system
+3. Create route file named media.routes.js
+4. Create controller file named media.controller.js
+5. Create validator file named media.validator.js
+6. Create service file named media.service.js
+
+***Test each module then send for review
