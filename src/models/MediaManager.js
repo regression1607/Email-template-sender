@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+import mongoose from 'mongoose';
 
-const mediaManagerSchema = new mongoose.Schema({
+const mediaSchema  = new mongoose.Schema({
   owner: {
     type: String,
     required: true
@@ -74,6 +74,4 @@ mediaManagerSchema.index({ mediatype: 1 });
 mediaManagerSchema.index({ resource: 1 });
 mediaManagerSchema.index({ uploadedAt: -1 });
 
-const MediaManager = mongoose.model('MediaManager', mediaManagerSchema);
-
-module.exports = MediaManager;
+export default mongoose.model('Media', mediaSchema);
