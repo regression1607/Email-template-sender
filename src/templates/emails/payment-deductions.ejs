@@ -9,13 +9,8 @@
 <body style="margin: 0; padding: 0; background-color: #000000; font-family: Roboto, serif; font-size: 16px;">
     <table style="width: 600px; margin: 0 auto; border-collapse: collapse; background-color: #ffffff;">
         <!-- Header -->
-        <tr>
-            <td align="center" style="padding: 25px 0; background-color: #fff;">
-                <a href="javascript:void(0)">
-                    <img src="https://expertabackend.s3.ap-south-1.amazonaws.com/platform/icons/logo.svg" alt="Logo">
-                </a>
-            </td>
-        </tr>
+        <%- include('partials/header.ejs') %>
+
 
         <!-- Yellow Section -->
         <tr>
@@ -117,80 +112,11 @@
         </tr>
 
         <!-- Footer -->
-        <tr>
-            <td>
-                <table style="width: 100%; background: #fff; border-collapse: collapse;">
-                    <tr>
-                        <td style="padding: 0 50px;">
-                            <hr style="border-top: 1px solid #e4e4e4; margin: 0px;">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" style="padding: 30px 50px 10px;">
-                            <h2 style="font-size: 24px; color: #171717; font-weight: 500; margin: 0; line-height: 32px;">
-                                Have any feedback for us?
-                            </h2>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" style="padding: 0 50px 10px;">
-                            <p style="font-size: 16px; color: #171717; font-weight: 400; margin: 0; line-height: 24px;">
-                                Share your feedback with us and help us serve you better:
-                            </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" style="padding: 0 50px 50px;">
-                            <a href="mailto:support@experta.io" style="color: #FE7733; text-decoration: none;">support@experta.io</a>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+              <!-- Footer -->
+              <%- include('partials/footer') %>
 
-        <!-- Social Media Section -->
-        <tr>
-            <td>
-                <table style="width: 100%; background: #EFEFEF; border-collapse: collapse;">
-                    <tr>
-                        <td align='center' style=" padding: 30px 50px 0px;">
-                            <div
-                                style="
-                                display: flex;
-                                justify-Content: space-between;
-                                align-Items: center;
-                                "
-                            >
-                            <a href="javascript:void(0)">
-                                <img src="https://expertabackend.s3.ap-south-1.amazonaws.com/platform/icons/logo.svg" alt="Logo">
-                            </a>                                
-                                <div
-                                style="
-                                display: flex;
-                                justify-Content: space-between;
-                                align-Items: center;
-                                gap:10px;
-                                "
-                            >
-                                    <a href="javascript:void(0)"><img src="https://expertabackend.s3.ap-south-1.amazonaws.com/platform/icons/facebook-icon.png" alt="Facebook" width="24"></a>
-                                    <a href="javascript:void(0)"><img src="https://expertabackend.s3.ap-south-1.amazonaws.com/platform/icons/twitter-icon.png" alt="Twitter" width="24"></a>
-                                    <a href="javascript:void(0)"><img src="https://expertabackend.s3.ap-south-1.amazonaws.com/platform/icons/linkedin-icon.png" alt="LinkedIn" width="24"></a>
-                                    <a href="javascript:void(0)"><img src="https://expertabackend.s3.ap-south-1.amazonaws.com/platform/icons/instagram-icon.png" alt="Instagram" width="24"></a>
-                                    <a href="javascript:void(0)"><img src="https://expertabackend.s3.ap-south-1.amazonaws.com/platform/icons/youtube-icon.png" alt="YouTube" width="24"></a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td align="left" style="padding: 20px 50px 30px;">
-                            <p style="font-size: 14px; color: #8B8B8B; font-weight: 400; margin: 0; line-height: 24px;">
-                                Copyright © 2025 | All rights reserved by <b style="font-weight: 500;"><a href="javascript:void(0)" style="color: #171717; text-decoration: none;">Experta</a></b>
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+              <!-- Social Media Section -->
+              <%- include('partials/socialMedia') %>
     </table>
 </body>
 </html>
